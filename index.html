@@ -1,86 +1,26 @@
 <!DOCTYPE html>
-<html>
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Школьный бот</title>
-   <script src="https://telegram.org/js/telegram-web-app.js"></script> <!--Подключаем скрипт от телеграм-->
-
-   <style>
-      body{
-         color: var(--tg-theme-text-color);
-         background: var(--tg-theme-bg-color);
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         font-size: 18px;
-      }
-
-      .hint{
-         color: var(--tg-theme-hint-color);
-      }
-
-      .link{
-         color: var(--tg-theme-link-color);
-      }
-
-      .button{
-         background: var(--tg-theme-button-color);
-         color: var(--tg-theme-button-text-color);
-         border: none;
-         font-size: 18px;
-      }
-
-      .button:not(:last-child){
-         margin-bottom: 20px
-      }
-
-      #usercard{
-         text-align: center;
-      }
-   </style>
-</head>
-
-<body>
-   </div>
-</body>
-
-<script>
-   let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
-
-   tg.expand(); //расширяем на все окно  
-
-   tg.MainButton.text = "Changed Text"; //изменяем текст кнопки 
-   tg.MainButton.setText("Changed Text1"); //изменяем текст кнопки иначе
-   tg.MainButton.textColor = "#F55353"; //изменяем цвет текста кнопки
-   tg.MainButton.color = "#143F6B"; //изменяем цвет бэкграунда кнопки
-   tg.MainButton.setParams({"color": "#143F6B"}); //так изменяются все параметры
-
-   let btn = document.getElementById("btn"); //получаем кнопку скрыть/показать 
-
-   btn.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-      if (tg.MainButton.isVisible){ //если кнопка показана 
-         tg.MainButton.hide() //скрываем кнопку 
-      }
-      else{ //иначе
-         tg.MainButton.show() //показываем 
-      }
-   });
-
-   let btnED = document.getElementById("btnED"); //получаем кнопку активировать/деактивировать
-   btnED.addEventListener('click', function(){ //вешаем событие на нажатие html-кнопки
-      }
-   });
-
-   Telegram.WebApp.onEvent('mainButtonClicked', function(){
-      tg.sendData("some string that we need to send"); 
-      //при клике на основную кнопку отправляем данные в строковом виде
-   });
-
-   //работает только в attachment menu
-   // let pic = document.createElement('img'); //создаем img
-   // pic.src = tg.initDataUnsafe.user.photo_url; //задаём src 
-   // usercard.appendChild(pic); //добавляем элемент в карточку 
-</script>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta
+      name="theme-color"
+      content="#90C5D6"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#181919"
+      media="(prefers-color-scheme: dark)"
+    />
+    <title>Gift App (VS)</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="/src/index.tsx" type="module"></script>
+  </body>
 </html>
