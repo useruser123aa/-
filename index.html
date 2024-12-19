@@ -5,29 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Пример страницы</title>
     <style>
-      /* Простейшие стили для заголовка */
-      h1 {
-        color: blue;
+      body {
+        background-color: lightblue;
+        font-family: Arial, sans-serif;
         text-align: center;
       }
-      /* Стили для параграфа */
-      p {
-        font-family: Arial, sans-serif;
+      img {
+        max-width: 80%;
+        height: auto;
+      }
+      .button-container {
+        margin-top: 20px;
+      }
+      button {
+        margin: 5px;
+        padding: 10px 20px;
         font-size: 16px;
-        margin: 20px;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
     <h1>Добро пожаловать на мою страницу!</h1>
-    <p>
-      Это пример простой HTML страницы. Она включает в себя заголовок
-      и один параграф текста. Вы можете добавлять сюда больше контента
-      по своему усмотрению.
-    </p>
-    <p>
-      HTML позволяет нам структурировать контент и делать его более
-      доступным для пользователей.
-    </p>
+    <p>Это пример веб-страницы с голубым фоном, текстом и картинкой.</p>
+    <img src="https://via.placeholder.com/400" alt="Пример картинки" />
+    <div class="button-container">
+      <button>Кнопка 1</button>
+      <button>Кнопка 2</button>
+      <button>Кнопка 3</button>
+      <button>Кнопка 4</button>
+    </div>
   </body>
 </html>
