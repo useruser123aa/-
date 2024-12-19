@@ -1,33 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Пример страницы</title>
     <style>
-      body {
-        background-color: lightblue;
-        font-family: Arial, sans-serif;
-        text-align: center;
-      }
-      img {
-        max-width: 80%;
-        height: auto;
-      }
-      .button-container {
-        margin-top: 20px;
-      }
-      button {
-        margin: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-      }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .full-screen-image {
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://i.postimg.cc/BvYBGvx2/Start.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #ffffff;
+            border: 1px solid #4CAF50;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            color: #4CAF50;
+            width: 120px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .button img {
+            display: block;
+            margin: 0 auto 5px;
+            width: 40px; 
+            height: 40px;
+        }
     </style>
-  </head>
-  <body>
-    <h1>Добро пожаловать на мою страницу!</h1>
-    <p>Это пример веб-страницы с голубым фоном, текстом и картинкой.</p>
+</head>
+<body>
+
+<header>
+    <h1>Заголовок страницы</h1>
+</header>
+
+<div class="full-screen-image"></div>
     <img src="https://i.postimg.cc/BvYBGvx2/Start.jpg" alt="Пример картинки" />
     <div class="buttons">
     <a href="https://link1.com" class="button">
